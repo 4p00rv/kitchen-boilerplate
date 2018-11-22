@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+  vm_hostname: 'admindb.regentmarkets.com'
+
+provisioner:
+  name: chef_zero
+    
+platforms:
+  - name: debian/stretch64
+    
+suites:
+  - name: default
+    attributes:
+      tags:
+        - database

@@ -1,0 +1,143 @@
+{
+  "revision_id": "4dd29cf5f9bcb50faf7e982b3001ea091c550ae1d601f40b1a146bdab6a55aeb",
+  "name": "user_update",
+  "run_list": [
+    "recipe[binary_wrapper_users::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "binary_library_common": {
+      "version": "0.1.20",
+      "identifier": "247f61410199d80f8a3921013b002401d2ff6de1",
+      "dotted_decimal_identifier": "10273154840762840.4374102622157568.39590253522401",
+      "source": "../chef/cookbooks/binary_library_common",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "e1ee96958ec5974a09ca23352cbd066eb9d3d26f",
+        "working_tree_clean": true,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/db-access"
+        ]
+      },
+      "source_options": {
+        "path": "../chef/cookbooks/binary_library_common"
+      }
+    },
+    "binary_wrapper_users": {
+      "version": "0.1.44",
+      "identifier": "a5efc7b1871baa492718e53a6601bfb2e7bbd09d",
+      "dotted_decimal_identifier": "46707012113210282.20590661178385921.210775112929437",
+      "source": "../chef/cookbooks/binary_wrapper_users",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "e1ee96958ec5974a09ca23352cbd066eb9d3d26f",
+        "working_tree_clean": true,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/db-access"
+        ]
+      },
+      "source_options": {
+        "path": "../chef/cookbooks/binary_wrapper_users"
+      }
+    },
+    "sudo": {
+      "version": "5.4.0",
+      "identifier": "e3d9c9b1e8d017ee20de223ba8fe6030015da82b",
+      "dotted_decimal_identifier": "64134280009797655.67027182886299902.105759297611819",
+      "source": "../third-party/cookbooks/sudo",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:binary-com/chef-third-party.git",
+        "revision": "a9880d5cd2e283689b8b89a149e7007e2ce36c76",
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../third-party/cookbooks/sudo"
+      }
+    },
+    "user": {
+      "version": "0.7.0",
+      "identifier": "20811bf2f6e62596d99c589bee75acca7475c0da",
+      "dotted_decimal_identifier": "9149156295108133.42460512031338101.189985537245402",
+      "source": "../third-party/cookbooks/user",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:binary-com/chef-third-party.git",
+        "revision": "a9880d5cd2e283689b8b89a149e7007e2ce36c76",
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../third-party/cookbooks/user"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "binary_library_common",
+        "= 0.1.20"
+      ],
+      [
+        "binary_wrapper_users",
+        "= 0.1.44"
+      ],
+      [
+        "sudo",
+        "= 5.4.0"
+      ],
+      [
+        "user",
+        "= 0.7.0"
+      ]
+    ],
+    "dependencies": {
+      "binary_library_common (0.1.20)": [
+
+      ],
+      "binary_wrapper_users (0.1.44)": [
+        [
+          "user",
+          ">= 0.0.0"
+        ],
+        [
+          "sudo",
+          ">= 0.0.0"
+        ],
+        [
+          "binary_library_common",
+          ">= 0.0.0"
+        ]
+      ],
+      "sudo (5.4.0)": [
+
+      ],
+      "user (0.7.0)": [
+
+      ]
+    }
+  }
+}
